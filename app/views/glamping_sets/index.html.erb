@@ -1,8 +1,15 @@
 <ul>
   <% @glamping_sets.each do |glamping_set| %>
     <li><%= glamping_set.name %></li>
-    <%# <li><%= glamping_set.description %></li>
-    <%# <li><%= glamping_set.total_occupancy %></li> %>
-    <%# <li><%= glamping_set.price %></li> %> %>
+    <li><%= glamping_set.description %></li>
+    <li><%= glamping_set.total_occupancy %></li>
+    <li><%= glamping_set.price_per_night %></li>
+  <% end %>
+</ul>
+
+
+ul>
+  <% @glamping_sets.each do |glamping_set| %>
+    <li><%= link_to glamping_set.name, glamping_set_path(glamping_set) %></li>
   <% end %>
 </ul>
