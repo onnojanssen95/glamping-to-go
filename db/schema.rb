@@ -10,9 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_23_155857) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_24_103918) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_Date"
+    t.date "end_date"
+    t.float "price_per_night"
+    t.string "pickup_type"
+    t.bigint "user_id", null: false
+    t.bigint "glamping_sets_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["glamping_sets_id"], name: "index_bookings_on_glamping_sets_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "glamping_sets", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "total_occupancy"
+    t.float "price_per_night"
+    t.string "photo_url"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_glamping_sets_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_155857) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "glamping_sets", column: "glamping_sets_id"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "glamping_sets", "users"
 end
