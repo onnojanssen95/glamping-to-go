@@ -16,7 +16,6 @@
 
     <%= yield %>
     <% if user_signed_in? %>
-      <h2>Hi there, <%= current_user.email %></h2>
       <%= render "shared/footer" %>
     <% end %>
   </body>
