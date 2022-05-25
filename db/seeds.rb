@@ -19,11 +19,9 @@ require 'faker'
       description: Faker::Lorem.paragraph,
       total_occupancy: rand(1..10),
       price_per_night: rand(200..2000),
-      photo_url: "https://source.unsplash.com/random"
+      photo_url: url("https://source.unsplash.com/random")
     )
     glamping_set.user = user
     glamping_set.save!
   end
 end
-
-
