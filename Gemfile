@@ -5,6 +5,8 @@ ruby "3.0.3"
 
 gem "devise"
 
+gem "cloudinary"
+
 gem "dotenv-rails", groups: [:development, :test]
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
