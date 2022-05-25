@@ -1,0 +1,8 @@
+
+<%= simple_form_for [@glamping_set, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :price_per_night %>
+  <%= f.input :pickup_type %>
+  <%= f.submit %>
+<% end %>

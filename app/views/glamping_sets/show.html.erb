@@ -1,0 +1,13 @@
+<h2><%= @glamping_set.name %></h2>
+<p><%= @glamping_set.description %></p>
+<p><%= @glamping_set.total_occupancy %></p>
+<p><%= @glamping_set.price_per_night %></p>
+<p><%= @glamping_set.photo_url %></p>
+<p><%= @glamping_set.user_id %></p>
+
+
+
+<%= link_to "Delete",
+  glamping_set_path(@glamping_set),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
