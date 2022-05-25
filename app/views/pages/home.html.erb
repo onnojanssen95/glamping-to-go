@@ -3,7 +3,9 @@
 
 <div class="hero-image">
   <div class="hero-text">
+  <% if current_user  %>
     <h1>Hello <%= current_user.email %></h1>
+  <% end %>
     <p>Explore glamping equipment enywhere in Europe</p>
     <%= link_to(glamping_sets_path) do %>
       <button class="main-button">See all our glamping</button>
