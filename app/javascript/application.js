@@ -2,4 +2,4 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
-import "@fortawesome/fontawesome-free/css/all"
+// import "@fontawesome/fontawesome-free/css/all" THIS IS WRONG HERE

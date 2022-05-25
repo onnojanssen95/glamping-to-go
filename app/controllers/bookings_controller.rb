@@ -29,10 +29,19 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  # def destroy
+  #   @booking = Booking.find(params[:id])
+  #   @booking.destroy
+  #   # No need for app/views/restaurants/destroy.html.erb
+  #   redirect_to booking_path, status: :see_other
+  # end
+
 
   def destroy
+    # raise
+    @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to galm_path, status: :see_
+    redirect_to  glamping_set_bookings_path(@booking.glamping_set), status: :see_other
   end
 
   # def destroy

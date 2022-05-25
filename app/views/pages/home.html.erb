@@ -5,6 +5,8 @@
   <div class="hero-text">
     <h1>Hello <%= current_user.email %></h1>
     <p>Explore glamping equipment enywhere in Europe</p>
-    <button class = main-button>Let's Go</button>
+    <%= link_to(glamping_sets_path) do %>
+      <button class="main-button">See all our glamping</button>
+    <% end %>
   </div>
 </div>
