@@ -1,13 +1,16 @@
-<ul>
+
+<div class="cards">
   <% @glamping_sets.each do |glamping_set| %>
-    <div class="card">
-      <img url="https://images.unsplash.com/photo-1624254495476-db6cc8b77e98?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435" alt="photo" style="width:100%">
-      <h3><%= glamping_set.name %></h3>
-      <h3><%= glamping_set.price_per_night %></h3>
-      <p><%= glamping_set.description %></p>
-    </div>
+      <div class="card-glamping-set">
+        <%= cl_image_tag("cfbkwutifofdxpqevx28", width: 311, height: 300, crop: :fill) %>
+        <div class="container-details">
+          <h3 class="name"><%= glamping_set.name%></h3>
+          <h3 class="price"><%= glamping_set.price_per_night %> EUR</h3>
+          <p class="discription"><%= glamping_set.description %></p>
+        </div>
+      </div>
   <% end %>
-</ul>
+</div>
 
 
 <%
