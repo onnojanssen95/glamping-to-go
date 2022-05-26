@@ -3,7 +3,8 @@
     <div class="content">
       <div class="welcome">Here you can do your booking!</div>
       <div class="subtitle">GlampingToGo - Glamorous Camping</div>
-      <div class="input-fields"><%= simple_form_for [@glamping_set, @booking] do |f| %>
+      <div class="input-fields">
+      <%= simple_form_for [@glamping_set, @booking] do |f| %>
           <%= f.input :start_date, as: :date, html5: true %>
           <%= f.input :end_date, as: :date, html5: true %>
           <%= f.input :pickup_type, as: :select, collection: ["pick at owner", "get delivered", "full service"], prompt: "How do you want to get the set?", label: false %>
