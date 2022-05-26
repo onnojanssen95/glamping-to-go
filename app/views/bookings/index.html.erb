@@ -1,12 +1,14 @@
-<ul>
-  <% @bookings.each do |booking| %>
-    <li><%= booking.start_date %></li>
-    <li><%= booking.end_date %></li>
-    <li><%= booking.pickup_type %></li>
-    <li><%= link_to "see booking", glamping_set_booking_path( booking.glamping_set, booking)%></li>
+<div>
+  <div>
+    <ul>
+      <% @bookings.each do |booking| %>
+     <h2><li><%= booking.start_date %></li></h2>
+        <li><%= booking.end_date %></li>
+        <li><%= booking.pickup_type %></li>
+        <li><%= link_to "see booking", glamping_set_booking_path( booking.glamping_set, booking)%></li>
 
-  <% end %>
-</ul>
-
-
-<%= link_to "back to glampings", glamping_sets_path %>
+      <% end %>
+    </ul>
+  </div>
+  <%= link_to "back to glampings", glamping_sets_path %>
+</div>
