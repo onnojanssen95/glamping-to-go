@@ -1,21 +1,31 @@
 <div class=container-show>
-  <div class="image-show">
-    <%# <p><%= @glamping_set.photo_url %>
-    <%= @glamping_set.photo_url %>
+  <div class="container-mini-first">
+       <h2><%= @glamping_set.name %></h2>
   </div>
 
-  <div class="description-show">
-    <h2><%= @glamping_set.name %></h2>
-    <p><strong>Desription: </strong><%= @glamping_set.description %></p>
-    <p><strong>Total occupancy: </strong><%= @glamping_set.total_occupancy %></p>
-    <p><strong>Price per night: </strong><%= @glamping_set.price_per_night %> EUR</p>
-    <p><%= @glamping_set.user_id %></p>
+  <div class="container-mini-second">
 
-    <%= link_to "Delete this glamping set",
-      glamping_set_path(@glamping_set),
-      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-    %>
-    <%= link_to "Book", new_glamping_set_booking_path(@glamping_set) %>
-    <%= link_to "back to all glampings", glamping_sets_path %>
+    <div class="image-show">
+      <%= cl_image_tag @glamping_set.photo.key, height: 400, width: 1100, crop: :fill %>
+    </div>
+
+
+    <div class="description-show">
+      <p><strong>Desription: </strong><%= @glamping_set.description %></p>
+      <p><strong>Total occupancy: </strong><%= @glamping_set.total_occupancy %></p>
+      <p><strong>Price per night: </strong><%= @glamping_set.price_per_night %> EUR</p>
+      <p><%= @glamping_set.user_id %></p>
+
+      <%= link_to "Delete this glamping set",
+        glamping_set_path(@glamping_set),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+      <%= link_to "Book", new_glamping_set_booking_path(@glamping_set) %>
+      <%= link_to "back to all glampings", glamping_sets_path %>
+    </div>
   </div>
+
+
+
+
 </div>

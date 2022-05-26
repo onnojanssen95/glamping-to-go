@@ -41,7 +41,7 @@ class GlampingSetsController < ApplicationController
   private
 
   def glamping_set_params
-    params.require(:glamping_set).permit(:name, :description, :total_oppupancy, :price_per_night, :photo_url)
+    params.require(:glamping_set).permit(:name, :description, :total_oppupancy, :price_per_night, :photo)
   end
 
 
