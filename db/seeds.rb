@@ -7,13 +7,13 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
-10.times do
+5.times do
   user = User.new(
     email: Faker::Internet.email,
     password: Faker::Internet.password(min_length: 8)
   )
   user.save!
-  10.times do
+  5.times do
     glamping_set = GlampingSet.new(
       name: Faker::FunnyName.name,
       description: Faker::Lorem.paragraph,
