@@ -1,14 +1,19 @@
-<div>
-  <div>
-    <ul>
-      <% @bookings.each do |booking| %>
-     <h2><li><%= booking.start_date %></li></h2>
-        <li><%= booking.end_date %></li>
-        <li><%= booking.pickup_type %></li>
-        <li><%= link_to "see booking", glamping_set_booking_path( booking.glamping_set, booking)%></li>
+<div class="background-img">
+  <div class= "cards1">
 
-      <% end %>
-    </ul>
+
+      <div class="cards-container" >
+
+        <% @bookings.each do |booking| %>
+          <div class= single_booking>
+            <h3>Start date: <%= booking.start_date%></h3>
+            <h3>End date: <%= booking.end_date %></h3>
+            <h3>Pickup type: <%= booking.pickup_type %></h3>
+            <h3 class= see-booking><%= link_to "see booking", glamping_set_booking_path( booking.glamping_set, booking)%></h3>
+          </div>
+        <% end %>
+      </div>
   </div>
   <%= link_to "back to glampings", glamping_sets_path %>
 </div>
+index

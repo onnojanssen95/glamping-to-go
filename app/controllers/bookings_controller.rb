@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.reverse
   end
 
   def new
@@ -53,7 +53,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_Date, :end_date, :price_per_night, :pickup_type)
+    params.require(:booking).permit(:start_date, :end_date, :price_per_night, :pickup_type)
   end
 
 
