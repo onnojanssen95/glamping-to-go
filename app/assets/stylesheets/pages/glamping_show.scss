@@ -1,6 +1,5 @@
 .container-show {
   display: flex;
-  background-color: red;
   padding-top: 50px;
   flex-direction:column;
 }
@@ -10,7 +9,7 @@
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 10px;
-  border-bottom: 1px solid gray;
+  // border-bottom: 1px solid gray;
 }
 
 .container-mini-second {
@@ -25,8 +24,8 @@
   width: 720px;
   border-radius: 8px;
   // padding-top: 50px;
-  border: 2px solid black;
-  background-color: blue;
+    // border: 2px solid black;
+    // background-color: blue;
   margin: 5px;
 
 }
@@ -35,8 +34,19 @@
   // padding-top: 50px;
   display: flex;
   padding-bottom: 40px;
-  border: 2px solid black;
-  background-color: green;
+  border: 1px solid grey;
+  border-radius: 8px;
   margin: 5px;
   flex-direction: column;
+  justify-content: space-around;
+  width: 800px;
 }
+
+.sub-discription {
+  display: flex;
+  border-bottom: 1px solid gray;
+  flex-direction: column;
+  align-items: center;
+}
+
+
