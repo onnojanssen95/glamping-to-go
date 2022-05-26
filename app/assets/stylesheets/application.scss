@@ -13,13 +13,13 @@
 @import "pages/bookings";
 
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-}
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   min-height: 100vh;
+// }
 
 .wrapper {
-  height: 100%;
+  min-height: 100%;
 }
