@@ -39,3 +39,49 @@
   // margin-top: 0px;
 
 }
+
+.cards1{
+  border:2px solid black
+}
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+}
+
+.single_booking{
+  height: fit-content;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  color:rgb(253, 243, 213);
+  border-radius: 4px;
+  margin: 40px 0px 40px 0px;
+  background-color: rgba(202, 201, 138, .85);
+  // opacity: 0.85;
+  text-align: center;
+  padding: 15px 0px;
+
+}
+.color_dots {
+  border:2px solid red
+  display flex;
+  justify-content: space-between;
+}
+.background-img{
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1470246973918-29a93221c455?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887)
+
+}
+
+.see-booking{
+  a {
+    color: rgb(31, 241, 80) !important;
+    opacity: 1 !important;
+  }
+  text-decoration: underline;
+  text-align: center;
+}
+.title-booking{
+  color:rgb(35, 108, 21);
+}

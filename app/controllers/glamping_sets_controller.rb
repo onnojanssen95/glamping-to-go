@@ -1,7 +1,7 @@
 class GlampingSetsController < ApplicationController
 
   def index
-    @glamping_sets = GlampingSet.all
+    @glamping_sets = GlampingSet.all.reverse
   end
 
   def new
