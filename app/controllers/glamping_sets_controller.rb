@@ -35,10 +35,8 @@ class GlampingSetsController < ApplicationController
     @glamping_set = GlampingSet.find(params[:id])
     @glamping_set.destroy
     # No need for app/views/restaurants/destroy.html.erb
-    redirect_to glamping_set_path, status: :see_other
+    redirect_to glamping_sets_path, status: :see_other
   end
-
-
 
   private
 

@@ -2,20 +2,12 @@
 <div class="cards">
   <% @glamping_sets.each do |glamping_set| %>
       <div class="card-glamping-set">
-        <%= cl_image_tag("cfbkwutifofdxpqevx28", width: 311, height: 300, crop: :fill) %>
+        <%# <%= cl_image_tag("cfbkwutifofdxpqevx28", width: 311, height: 300, crop: :fill)%> %>
         <div class="container-details">
-          <h3 class="name"><%= glamping_set.name%></h3>
+          <h3 class="name"><%= link_to glamping_set.name, glamping_set_path(glamping_set)%></h3>
           <h3 class="price"><%= glamping_set.price_per_night %> EUR</h3>
           <p class="discription"><%= glamping_set.description %></p>
         </div>
       </div>
   <% end %>
 </div>
-
-<ul>
-  <% @glamping_sets.each do |glamping_set| %>
-    <li><%= link_to glamping_set.name, glamping_set_path(glamping_set) %></li>
-  <% end %>
-</ul>
-
-

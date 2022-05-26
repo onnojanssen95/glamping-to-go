@@ -7,19 +7,19 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
-10.times do
+5.times do
   user = User.new(
     email: Faker::Internet.email,
     password: Faker::Internet.password(min_length: 8)
   )
   user.save!
-  10.times do
+  5.times do
     glamping_set = GlampingSet.new(
       name: Faker::FunnyName.name,
       description: Faker::Lorem.paragraph,
       total_occupancy: rand(1..10),
       price_per_night: rand(200..2000),
-      photo_url: url("https://source.unsplash.com/random")
+      photo_url: "https://source.unsplash.com/random"
     )
     glamping_set.user = user
     glamping_set.save!
