@@ -1,20 +1,19 @@
-<div class="container">
-  <div class="window">
-    <div class="content">
-      <div class="welcome">Here you can create a new glamping set</div>
-      <div class="subtitle">GlampingToGo - Glamorous Camping</div>
-      <div class="input-fields">
+<div class="glampingsets-container">
+  <div class="window-glampingsets">
+    <div class="content-glampingsets">
+      <div class="welcome-glampingsets">Here you can create a new glamping set</div>
+      <div class="subtitle-glampingsets">GlampingToGo - Glamorous Camping</div>
+      <div class="input-fields-glampingsets">
         <%= simple_form_for(@glamping_set) do |f| %>
-          <%= f.label :name %>
-          <%= f.text_field :name %>
-          <%= f.label :description %>
-          <%= f.text_field :description %>
-          <%= f.label :total_occupancy %>
-          <%= f.number_field :total_occupancy %>
-          <%= f.label :price_per_night %>
+          <%= f.label :name, class: "form-label" %>
+          <%= f.text_field :name, label: false, class: "form-control" %>
+          <%= f.label :description, class: "form-label"  %>
+          <%= f.text_field :description, label: false, class: "form-control"  %>
+          <%= f.label :total_occupancy, class: "form-label"  %>
+          <%= f.number_field :total_occupancy, label: false, class: "form-control"  %>
+          <%= f.label :price_per_night, class: "form-label"  %>
           <%= f.number_field :price_per_night %>
           <%= f.input :photo, as: :file %>
-
           <div><button class="ghost-round full width"><%= f.submit %></button></div>
         <% end %>
       </div>
