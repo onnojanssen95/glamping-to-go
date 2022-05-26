@@ -1,19 +1,21 @@
 <div class=container-show>
   <div class="container-mini-first">
        <h2><%= @glamping_set.name %></h2>
+         <%= link_to "back to all glampings", glamping_sets_path %>
   </div>
 
   <div class="container-mini-second">
 
     <div class="image-show">
-      <%= cl_image_tag @glamping_set.photo.key, height: 400, width: 1100, crop: :fill %>
+      <%= cl_image_tag @glamping_set.photo.key, :radius=>20,  crop: :fill %>
     </div>
 
 
     <div class="description-show">
-      <p><strong>Desription: </strong><%= @glamping_set.description %></p>
+
       <p><strong>Total occupancy: </strong><%= @glamping_set.total_occupancy %></p>
       <p><strong>Price per night: </strong><%= @glamping_set.price_per_night %> EUR</p>
+      <p><strong>Desription: </strong><%= @glamping_set.description %></p>
       <p><%= @glamping_set.user_id %></p>
 
       <%= link_to "Delete this glamping set",
