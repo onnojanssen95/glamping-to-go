@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-
+before_action :authenticate_user!, only:[:new]
   def index
     @bookings = Booking.all.reverse
   end
@@ -44,9 +44,7 @@ class BookingsController < ApplicationController
     redirect_to  glamping_set_bookings_path(@booking.glamping_set), status: :see_other
   end
 
-  # def destroy
-  #   @list.destroy
-  #   redirect_to lists_path, status: :see_other
+
   # end
 
 
