@@ -6,6 +6,7 @@
 
         <% @bookings.each do |booking| %>
           <div class= single_booking>
+            <h2 class= "title-booking"><%= booking.glamping_set.name %> </h2>
             <h3>Start date: <%= booking.start_date%></h3>
             <h3>End date: <%= booking.end_date %></h3>
             <h3>Pickup type: <%= booking.pickup_type %></h3>

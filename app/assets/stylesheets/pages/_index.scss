@@ -50,16 +50,16 @@
 }
 
 .single_booking{
-  height: 400px;
+  height: fit-content;
   width: 400px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   color:rgb(253, 243, 213);
   border-radius: 4px;
   margin: 40px 0px 40px 0px;
-  background-color: rgb(202, 201, 138);
-  opacity: 0.85;
+  background-color: rgba(202, 201, 138, .85);
+  // opacity: 0.85;
   text-align: center;
-  padding-top: 40px;
+  padding: 15px 0px;
 
 }
 .color_dots {
@@ -73,7 +73,13 @@ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(h
 }
 
 .see-booking{
-  color: brown;
+  a {
+    color: rgb(31, 241, 80) !important;
+    opacity: 1 !important;
+  }
   text-decoration: underline;
   text-align: center;
+}
+.title-booking{
+  color:rgb(35, 108, 21);
 }
