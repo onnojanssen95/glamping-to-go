@@ -1,14 +1,20 @@
-<%# <h1>Welcome to GlampingToGo</h1>
-<p>We are the coolest place to rent a glamping set</p> %>
+<section>
 
-<div class="hero-image">
-  <div class="hero-text">
-  <% if current_user  %>
-    <h1>Hello <%= current_user.email %></h1>
-  <% end %>
-    <p>Explore glamping equipment anywhere in Europe</p>
-    <%= link_to(glamping_sets_path) do %>
-      <button class="main-button">See all our glamping</button>
-    <% end %>
-  </div>
-</div>
+<%# <iframe src="https://player.vimeo.com/video/224137078?h=9df2c1d54e" allow="autoplay; fullscreen; muted; loop" allowfullscreen></iframe> %>
+
+<video class="banner-video" muted loop autoplay>
+  <source src="<%= asset_url('camp') %>"  type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+
+
+    <div class="top-layer"></div>
+    <div class="text">
+      <h2>Go Fancy Anywhere </h2>
+      <h3>Exploring glamping sets for any location</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</p>
+      <%= link_to "Explore", glamping_sets_path  %>
+
+</section>

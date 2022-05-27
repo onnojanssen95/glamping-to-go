@@ -12,3 +12,12 @@
 .navbar-lewagon .navbar-brand img {
   width: 50px;
 }
+
+.navbar-home {
+background: transparent;
+position: fixed !important;
+color: white;
+  a.nav-link {
+    color: white !important;
+  }
+}
