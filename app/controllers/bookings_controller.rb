@@ -15,6 +15,7 @@ before_action :authenticate_user!, only:[:new]
 
     @booking.glamping_set = @glamping_set
     @booking.user = current_user
+ 
     if @booking.save
       redirect_to glamping_set_bookings_path
     else
