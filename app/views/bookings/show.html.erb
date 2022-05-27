@@ -1,12 +1,20 @@
+<div class= "body-show">
 
-<p><%= @booking.start_date %></p>
-<p><%= @booking.end_date %></p>
-<p><%= @booking.price_per_night %></p>
-<p><%= @booking.glamping_set_id %></p>
-<p><%= @booking.user_id %></p>
-<p><%= @booking.pickup_type %></p>
+  <div class= "main-container">
+    <h1>Your booking</h1>
 
-<%= link_to "Delete",
-  booking_path(@booking),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <p>Name of the set:</P>
+    <p><%= @booking.glamping_set.name %></p>
+    <p>Start date: <%=  @booking.start_date %></p>
+    <p>End date: <%= @booking.end_date %></p>
+    <p>Pickup type: <%= @booking.pickup_type %></p>
 
+    <%= cl_image_tag @booking.glamping_set.photo.key, crop: :fill %>
+
+    <div class = "delete-button1">
+      <%= link_to "Delete booking", booking_path(@booking),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    </div>
+
+  </div>
+</div>
